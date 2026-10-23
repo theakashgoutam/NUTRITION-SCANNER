@@ -1,0 +1,6 @@
+{
+  "name": "NutriLens AI",
+  "description": "NUTRITION SCANNER — AI food nutrition scanner with real-time food recognition, portion estimation, nutrition tracking, and healthy eating awareness.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

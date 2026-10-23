@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@layer utilities {
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @keyframes float-gentle {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 0.9;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.6;
+      transform: scale(1.04);
+    }
+  }
+
+  @keyframes laser-sweep {
+    0% {
+      top: 0%;
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      top: 100%;
+      opacity: 0.4;
+    }
+  }
+
+  @keyframes text-glow {
+    0%, 100% {
+      filter: drop-shadow(0 2px 8px rgba(249, 115, 22, 0.25));
+    }
+    50% {
+      filter: drop-shadow(0 4px 16px rgba(244, 63, 94, 0.4));
+    }
+  }
+
+  .animate-gradient-text {
+    background-size: 200% auto;
+    animation: gradient-shift 4s ease infinite;
+  }
+
+  .animate-float-gentle {
+    animation: float-gentle 3.5s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float-gentle 4s ease-in-out 1.2s infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  .animate-laser {
+    animation: laser-sweep 2.2s ease-in-out infinite alternate;
+  }
+
+  .animate-text-glow {
+    animation: text-glow 3.5s ease-in-out infinite;
+  }
+}
+
+/* Smooth Scrolling and Custom Scrollbars */
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(241, 245, 249, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(251, 146, 60, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(249, 115, 22, 0.7);
+}
+
